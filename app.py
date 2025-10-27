@@ -9,25 +9,15 @@ def hello_world():
 
 @app.route('/health', methods=['GET'])
 def call_health():
-    try:
-        # Llamamos a la app B, que está en localhost:3001
-        return 'OK', response.status_code
-    except requests.exceptions.ConnectionError:
-        return 'Error: no se pudo conectar con app B', 500
+    return 'OK', 200
+
 @app.route('/startup', methods=['GET'])
 def call_startup():
-    try:
-        # Llamamos a la app B, que está en localhost:3001
-        return 'OK', response.status_code
-    except requests.exceptions.ConnectionError:
-        return 'Error: no se pudo conectar con app B', 500
+    return 'OK', 200
+    
 @app.route('/readiness', methods=['GET'])
 def call_readiness():
-    try:
-        # Llamamos a la app B, que está en localhost:3001
-        return 'OK', response.status_code
-    except requests.exceptions.ConnectionError:
-        return 'Error: no se pudo conectar con app B', 500
+    return 'OK', 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
