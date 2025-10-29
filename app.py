@@ -14,7 +14,7 @@ def call_health():
 @app.route('/startup', methods=['GET'])
 def call_startup():
     return 'OK', 200
-    
+
 @app.route('/readiness', methods=['GET'])
 def call_readiness():
     return 'OK', 200
