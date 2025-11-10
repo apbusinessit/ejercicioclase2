@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    uses: apbusinessit/devops-pipelines/docker/workflow.yml@main
+    uses: apbusinessit/devops-pipelines/.github/workflows/docker/workflow.yml@main
     with:
       docker_image_name: hola-mundo-clase567
     secrets: inherit
